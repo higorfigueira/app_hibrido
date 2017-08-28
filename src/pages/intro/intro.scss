@@ -1,5 +1,25 @@
 page-intro {
-    .slides_img img {
+    .skip1 {
+        position: relative;
+        top: -15rem;
+        left: 15rem;
+    }
+    .skip2 {
+        position: relative;
+        top: -12rem;
+        left: 15rem;
+    }
+    .slides_img1 img {
+        width: 250px;
+    }
+    .slides_img2 img {
+        width: 210px;
+        /* width: auto; */
+        max-width: 60%;
+        /* height: auto; */
+        max-height: 75%;
+    }
+    .slides_img3 img {
         width: 250px;
     }
 }

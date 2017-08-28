@@ -1,22 +1,31 @@
 <ion-content>
     <ion-slides pager>
 
-        <ion-slide class="slid_img">
+        <ion-slide class="slid_img1">
+            <div class="skip1">
+                <a (click)="goToTabs()">
+                    <ion-icon name="arrow-dropright-circle"></ion-icon>
+                </a>
+            </div>
             <img src="assets/images/sliide2.jpg" alt="">
             <h3 class="top_title">E você, que tal doar também?</h3>
         </ion-slide>
 
-        <ion-slide class="slid_img">
+        <ion-slide class="slid_img2">
+            <div class="skip2">
+                <a (click)="goToTabs()">
+                    <ion-icon name="arrow-dropright-circle"></ion-icon>
+                </a>
+            </div>
             <img src="assets/images/sliide3.jpg" alt="">
             <h3 class="top_title">Já parou para pensar nisso?!</h3>
             <p>Tanta gente por ai precisando de umas gotinhas do seu sangue...</p>
         </ion-slide>
 
-        <ion-slide class="slid_img">
+        <ion-slide class="slid_img3">
             <img src="assets/images/sliide1.jpg" alt="">
             <h3 class="top_title">Então por que não fazer o bem, sem olhar a quem?!</h3>
-            <a (click)="goToTabs()">Então vamos lá!</a>
+            <button ion-button full (click)="goToTabs()" color="bordo">Então vamos lá!</button>
         </ion-slide>
-
     </ion-slides>
 </ion-content>
