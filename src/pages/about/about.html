@@ -1,7 +1,7 @@
 <ion-header>
     <ion-navbar>
         <ion-title>
-            Triagem
+            <span class="colordefault">Triagem</span>
         </ion-title>
     </ion-navbar>
 </ion-header>
@@ -9,31 +9,38 @@
 <ion-content padding>
     <h3 class="top_title">Informações basicas</h3>
     <ion-list>
+
         <ion-item>
-            <ion-label floating>Nome Completo</ion-label>
+            <ion-label floating>Primeiro Nome</ion-label>
             <ion-input type=string></ion-input>
         </ion-item>
+
         <ion-item>
-            <ion-label>Sexo:</ion-label>
+            <ion-label floating>Sobrenome</ion-label>
+            <ion-input type=string></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>Idade</ion-label>
+            <ion-input type="number"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Sexo</ion-label>
             <ion-select [(ngModel)]="Sexo">
                 <ion-option value="M">MASCULINO</ion-option>
                 <ion-option value="F">FEMININO</ion-option>
             </ion-select>
         </ion-item>
-        <ion-item>
-            <ion-label>Possui idade entre 16 e 69 anos?</ion-label>
-            <ion-select [(ngModel)]="idade">
-                <ion-option value="S">SIM</ion-option>
-                <ion-option value="N">NÃO</ion-option>
-            </ion-select>
-        </ion-item>
+
         <ion-item>
             <ion-label>Morador de Palmas-TO?</ion-label>
             <ion-select [(ngModel)]="Morador">
-                <ion-option value="S">SIM</ion-option>
-                <ion-option value="N">NÃO</ion-option>
+                <ion-option value="mora">SIM</ion-option>
+                <ion-option value="nao mora">NÃO</ion-option>
             </ion-select>
         </ion-item>
+
     </ion-list>
     <h3 class="top_title">Informações principais</h3>
     <ion-list>
@@ -47,7 +54,7 @@
         </ion-item>
         <ion-item>
             <ion-label>Tipo Sanguineos</ion-label>
-            <ion-select [(ngModel)]="Ativo">
+            <ion-select [(ngModel)]="Sangue">
                 <ion-option value="O+">O+</ion-option>
                 <ion-option value="O-">O-</ion-option>
                 <ion-option value="A+">A+</ion-option>
@@ -61,16 +68,19 @@
         <ion-item>
             <ion-label>De um ano pra cá, teve relações sexuais com mais de um parceiro?</ion-label>
             <ion-select [(ngModel)]="Ativo">
-                <ion-option value="S">SIM</ion-option>
-                <ion-option value="N">NÃO</ion-option>
+                <ion-option value="mais de um">SIM</ion-option>
+                <ion-option value="um ou menos">NÃO</ion-option>
             </ion-select>
         </ion-item>
         <ion-item>
             <ion-label>Alguma vez já teve Hepatite?</ion-label>
-            <ion-select [(ngModel)]="Ativo">
-                <ion-option value="S">SIM</ion-option>
-                <ion-option value="N">NÃO</ion-option>
+            <ion-select [(ngModel)]="Hepatite">
+                <ion-option value="teve">SIM</ion-option>
+                <ion-option value="nao teve">NÃO</ion-option>
             </ion-select>
         </ion-item>
+    </ion-list>
+    <ion-list>
+        <button ion-button color="bordo" block (click)="doConfirm()">Está tudo pronto?</button>
     </ion-list>
 </ion-content>
